@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        # VITE_API_URL va en build.args (NO en environment)
+        # porque es una variable de build time: Rsbuild la incrusta
+        # en el bundle estático durante "npm run build".
+        VITE_API_URL: http://localhost:8000/api
+    ports:
+      - "5173:5173"
