@@ -21,6 +21,15 @@ Aplicación web desarrollada con React + Rsbuild para el proyecto universitario 
 
 ---
 
+## Levantar el proyecto
+
+### 1. Clonar el repositorio
+
+```bash
+git clone <https://github.com/renato-quintupil/unab-taller-web.git>
+cd unab-taller-web
+```
+
 ## Ejecución local
 
 ```bash
@@ -80,30 +89,30 @@ docker-compose up --build
 
 ## Variables de entorno
 
-| Variable       | Descripción                        | Valor por defecto             |
-|----------------|------------------------------------|-------------------------------|
-| `VITE_API_URL` | URL base de la API REST del backend | `http://localhost:8000/api`   |
+| Variable       | Descripción                         | Valor por defecto           |
+| -------------- | ----------------------------------- | --------------------------- |
+| `VITE_API_URL` | URL base de la API REST del backend | `http://localhost:8000/api` |
 
 ---
 
 ## Rutas del frontend
 
-| Ruta                  | Página            | Descripción                                      |
-|-----------------------|-------------------|--------------------------------------------------|
-| `/`                   | HomePage          | Página de bienvenida con acceso a restaurantes   |
-| `/restaurantes`       | RestaurantesPage  | Listado de todos los restaurantes                |
-| `/restaurantes/:id`   | MenuPage          | Menú de productos de un restaurante específico   |
-| `/nosotros`           | NosotrosPage      | Información del proyecto                         |
+| Ruta                | Página           | Descripción                                    |
+| ------------------- | ---------------- | ---------------------------------------------- |
+| `/`                 | HomePage         | Página de bienvenida con acceso a restaurantes |
+| `/restaurantes`     | RestaurantesPage | Listado de todos los restaurantes              |
+| `/restaurantes/:id` | MenuPage         | Menú de productos de un restaurante específico |
+| `/nosotros`         | NosotrosPage     | Información del proyecto                       |
 
 ---
 
 ## Endpoints del backend que consume
 
-| Método | Endpoint                    | Descripción                              |
-|--------|-----------------------------|------------------------------------------|
-| `GET`  | `/api/restaurantes/`        | Lista todos los restaurantes             |
-| `GET`  | `/api/restaurantes/{id}/`   | Detalle de un restaurante y su menú      |
-| `GET`  | `/api/productos/`           | Lista todos los productos                |
+| Método | Endpoint                  | Descripción                         |
+| ------ | ------------------------- | ----------------------------------- |
+| `GET`  | `/api/restaurantes/`      | Lista todos los restaurantes        |
+| `GET`  | `/api/restaurantes/{id}/` | Detalle de un restaurante y su menú |
+| `GET`  | `/api/productos/`         | Lista todos los productos           |
 
 El backend debe estar corriendo en `http://localhost:8000` (o el valor configurado en `VITE_API_URL`).
 
