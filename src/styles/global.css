@@ -191,6 +191,63 @@ p {
   to { transform: rotate(360deg); }
 }
 
+/* ── Carrusel ─────────────────────────────────────────────── */
+.carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.carrusel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+  padding: 0.5rem 0.25rem;
+  flex: 1;
+}
+
+.carrusel-track::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}
+
+/* Cada slide tiene ancho fijo para que el carrusel tenga sentido */
+.carrusel-track > * {
+  flex: 0 0 260px;
+}
+
+.carrusel-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #e63946;
+  background-color: #ffffff;
+  color: #e63946;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+  line-height: 1;
+}
+
+.carrusel-btn:hover:not(:disabled) {
+  background-color: #e63946;
+  color: #ffffff;
+}
+
+.carrusel-btn:disabled {
+  border-color: #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
 /* ── Mensajes de error / vacío ────────────────────────────── */
 .error-msg {
   color: #c1121f;

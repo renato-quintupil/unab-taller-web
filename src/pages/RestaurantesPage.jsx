@@ -1,9 +1,10 @@
 // pages/RestaurantesPage.jsx
-// Lista todos los restaurantes obtenidos desde la API.
+// Lista todos los restaurantes obtenidos desde la API en un carrusel horizontal.
 
 import { useState, useEffect } from 'react'
 import { restaurantesService } from '../services/api'
 import RestauranteCard from '../components/RestauranteCard'
+import Carrusel from '../components/Carrusel'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 function RestaurantesPage() {
@@ -27,11 +28,11 @@ function RestaurantesPage() {
       {restaurantes.length === 0
         ? <p>No hay restaurantes disponibles.</p>
         : (
-          <div className="grid">
+          <Carrusel>
             {restaurantes.map(r => (
               <RestauranteCard key={r.id} restaurante={r} />
             ))}
-          </div>
+          </Carrusel>
         )
       }
     </main>
