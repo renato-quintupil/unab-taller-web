@@ -89,16 +89,34 @@ docker-compose up --build
 
 ## Variables de entorno
 
-| Variable       | Descripción                         | Valor por defecto           |
-| -------------- | ----------------------------------- | --------------------------- |
+| Variable | Descripción | Valor por defecto |
+|----------|-------------|-------------------|
+| `VITE_API_URL` | URL base de la API REST del backend | `http://localhost:8000/api` |
+
+----------|-------------|-------------------|
+| `VITE_API_URL` | URL base de la API REST del backend | `http://localhost:8000/api` |
+
+-------------- | ----------------------------------- | --------------------------- |
 | `VITE_API_URL` | URL base de la API REST del backend | `http://localhost:8000/api` |
 
 ---
 
 ## Rutas del frontend
 
-| Ruta                | Página           | Descripción                                    |
-| ------------------- | ---------------- | ---------------------------------------------- |
+| Ruta | Página | Descripción |
+|------|--------|-------------|
+| `/` | `HomePage` | Página de bienvenida con acceso a restaurantes |
+| `/restaurantes` | `RestaurantesPage` | Listado de todos los restaurantes |
+| `/restaurantes/:id` | `MenuPage` | Menú de productos de un restaurante |
+| `/nosotros` | `NosotrosPage` | Información del proyecto |
+
+------|--------|-------------|
+| `/` | `HomePage` | Página de bienvenida con acceso a restaurantes |
+| `/restaurantes` | `RestaurantesPage` | Listado de todos los restaurantes |
+| `/restaurantes/:id` | `MenuPage` | Menú de productos de un restaurante |
+| `/nosotros` | `NosotrosPage` | Información del proyecto |
+
+------------------- | ---------------- | ---------------------------------------------- |
 | `/`                 | HomePage         | Página de bienvenida con acceso a restaurantes |
 | `/restaurantes`     | RestaurantesPage | Listado de todos los restaurantes              |
 | `/restaurantes/:id` | MenuPage         | Menú de productos de un restaurante específico |
