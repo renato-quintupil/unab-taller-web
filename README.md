@@ -39,7 +39,7 @@ npm install
 Copia el archivo de variables de entorno y ajusta la URL del backend si es necesario:
 
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
 Edita `.env` si el backend no corre en `http://localhost:8000`:
@@ -89,8 +89,8 @@ docker-compose up --build
 
 ## Variables de entorno
 
-| Variable | Descripción | Valor por defecto |
-|----------|-------------|-------------------|
+| Variable       | Descripción                         | Valor por defecto           |
+| -------------- | ----------------------------------- | --------------------------- |
 | `VITE_API_URL` | URL base de la API REST del backend | `http://localhost:8000/api` |
 
 ----------|-------------|-------------------|
@@ -103,12 +103,12 @@ docker-compose up --build
 
 ## Rutas del frontend
 
-| Ruta | Página | Descripción |
-|------|--------|-------------|
-| `/` | `HomePage` | Página de bienvenida con acceso a restaurantes |
-| `/restaurantes` | `RestaurantesPage` | Listado de todos los restaurantes |
-| `/restaurantes/:id` | `MenuPage` | Menú de productos de un restaurante |
-| `/nosotros` | `NosotrosPage` | Información del proyecto |
+| Ruta                | Página             | Descripción                                    |
+| ------------------- | ------------------ | ---------------------------------------------- |
+| `/`                 | `HomePage`         | Página de bienvenida con acceso a restaurantes |
+| `/restaurantes`     | `RestaurantesPage` | Listado de todos los restaurantes              |
+| `/restaurantes/:id` | `MenuPage`         | Menú de productos de un restaurante            |
+| `/nosotros`         | `NosotrosPage`     | Información del proyecto                       |
 
 ------|--------|-------------|
 | `/` | `HomePage` | Página de bienvenida con acceso a restaurantes |
@@ -117,10 +117,10 @@ docker-compose up --build
 | `/nosotros` | `NosotrosPage` | Información del proyecto |
 
 ------------------- | ---------------- | ---------------------------------------------- |
-| `/`                 | HomePage         | Página de bienvenida con acceso a restaurantes |
-| `/restaurantes`     | RestaurantesPage | Listado de todos los restaurantes              |
-| `/restaurantes/:id` | MenuPage         | Menú de productos de un restaurante específico |
-| `/nosotros`         | NosotrosPage     | Información del proyecto                       |
+| `/` | HomePage | Página de bienvenida con acceso a restaurantes |
+| `/restaurantes` | RestaurantesPage | Listado de todos los restaurantes |
+| `/restaurantes/:id` | MenuPage | Menú de productos de un restaurante específico |
+| `/nosotros` | NosotrosPage | Información del proyecto |
 
 ---
 
